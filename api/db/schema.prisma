@@ -17,6 +17,7 @@ generator client {
 // Define your own datamodels here and run `yarn redwood prisma migrate dev`
 model lostItem {
   id               Int      @id @default(autoincrement())
+  createdAt        DateTime @default(now())
   name             String
   description      String
   itemPhotoURL     String // URL of the photo of the item (clear photograph of the object in isolation ideally)
@@ -24,5 +25,4 @@ model lostItem {
   locationPhotoURL String // URL of the photo of the location (photograph of the object in the stored location)
   area             String // the area in which the object sits (e.g "Bedroom")
   dateLastSeen     DateTime
-  dateCreated      DateTime @default(now())
 }
