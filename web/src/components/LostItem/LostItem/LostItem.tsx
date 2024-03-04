@@ -85,6 +85,10 @@ const LostItem = ({ lostItem }: Props) => {
               <th>Date last seen</th>
               <td>{timeTag(lostItem.dateLastSeen)}</td>
             </tr>
+            <tr>
+              <th>Date created</th>
+              <td>{timeTag(lostItem.createdAt)}</td>
+            </tr>
           </tbody>
         </table>
       </div>
