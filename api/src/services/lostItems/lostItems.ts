@@ -15,9 +15,8 @@ export const lostItem: QueryResolvers['lostItem'] = ({ id }) => {
 export const createLostItem: MutationResolvers['createLostItem'] = ({
   input,
 }) => {
-  const dbInput = { ...input, dateCreated: new Date() }
   return db.lostItem.create({
-    data: dbInput,
+    data: input,
   })
 }
 

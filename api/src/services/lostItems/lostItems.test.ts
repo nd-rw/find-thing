@@ -1,5 +1,3 @@
-import type { lostItem } from '@prisma/client'
-
 import {
   lostItems,
   lostItem,

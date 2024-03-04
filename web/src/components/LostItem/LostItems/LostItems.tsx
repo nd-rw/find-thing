@@ -72,7 +72,6 @@ const LostItemsList = ({ lostItems }: FindLostItems) => {
               <td>{truncate(lostItem.locationPhotoURL)}</td>
               <td>{truncate(lostItem.area)}</td>
               <td>{timeTag(lostItem.dateLastSeen)}</td>
-              <td>{timeTag(lostItem.dateCreated)}</td>
               <td>
                 <nav className="rw-table-actions">
                   <Link

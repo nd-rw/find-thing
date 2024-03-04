@@ -22,7 +22,6 @@ export const QUERY: TypedDocumentNode<
       locationPhotoURL
       area
       dateLastSeen
-      dateCreated
     }
   }
 `

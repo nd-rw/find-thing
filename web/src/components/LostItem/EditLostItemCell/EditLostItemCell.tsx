@@ -26,7 +26,6 @@ export const QUERY: TypedDocumentNode<EditLostItemById> = gql`
       locationPhotoURL
       area
       dateLastSeen
-      dateCreated
     }
   }
 `
@@ -45,7 +44,6 @@ const UPDATE_LOST_ITEM_MUTATION: TypedDocumentNode<
       locationPhotoURL
       area
       dateLastSeen
-      dateCreated
     }
   }
 `
