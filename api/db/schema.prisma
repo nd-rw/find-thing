@@ -15,10 +15,14 @@ generator client {
 }
 
 // Define your own datamodels here and run `yarn redwood prisma migrate dev`
-// to create migrations for them and apply to your dev DB.
-// TODO: Please remove the following example:
-model UserExample {
-  id    Int     @id @default(autoincrement())
-  email String  @unique
-  name  String?
+model lostItem {
+  id               Int      @id @default(autoincrement())
+  name             String
+  description      String
+  itemPhotoURL     String // URL of the photo of the item (clear photograph of the object in isolation ideally)
+  location         String // specific location of the object (e.g "on the table")
+  locationPhotoURL String // URL of the photo of the location (photograph of the object in the stored location)
+  area             String // the area in which the object sits (e.g "Bedroom")
+  dateLastSeen     DateTime
+  dateCreated      DateTime @default(now())
 }
