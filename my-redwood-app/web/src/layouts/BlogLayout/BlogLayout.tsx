@@ -5,11 +5,17 @@ type BlogLayoutProps = {
 }
 
 const BlogLayout = ({ children }: BlogLayoutProps) => {
-  return <>
+  return (
+    <>
       <header>
-        <h1>Redwood Blog</h1>
+        <h1>
+          <Link to={routes.home()}>Redwood Blog</Link>
+        </h1>
         <nav>
           <ul>
+            <li>
+              <Link to={routes.home()}>Home</Link>
+            </li>
             <li>
               <Link to={routes.about()}>About</Link>
             </li>
@@ -18,6 +24,7 @@ const BlogLayout = ({ children }: BlogLayoutProps) => {
       </header>
       <main>{children}</main>
     </>
+  )
 }
 
 export default BlogLayout
